@@ -12,7 +12,7 @@ export default function Hero() {
             <h2 className="text-1xl md:text-1xl lg:text-2xl font-serif mb-6 text-base">
               future, with timeless designs
             </h2>
-            <button className="text-gray-100 bg-[#8773c9] py-3 px-6 rounded hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 mb-6">
+            <button className="text-gray-100 bg-[#33255f] py-3 px-6 rounded hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 mb-6">
               View collection
             </button>
             <p className="text-sm sm:text-base md:text-lg text-gray-300">

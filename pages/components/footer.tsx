@@ -8,7 +8,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#332a52] text-gray-200 py-12">
+    <footer className="bg-[#1f173d] text-gray-200 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Menu Section */}
@@ -33,6 +33,8 @@ const Footer = () => {
                 <li key={item}>
                   <Link href={`/categories/${item.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-indigo-600">
                     {item}
+                    <li>
+              </li>
                   </Link>
                 </li>
               ))}
@@ -58,6 +60,7 @@ const Footer = () => {
               <li>
                 <Link href="/returns-policy" className="hover:text-indigo-600">Returns policy</Link>
               </li>
+           
             </ul>
           </div>
 
@@ -70,12 +73,12 @@ const Footer = () => {
                 id="email"
                 type="email"
                 placeholder="your@email.com"
-                className="px-4 py-2 w-full rounded-md bg-gray-700 text-gray-200 focus:outline-none"
+                className="px-5 py-4 w-full rounded-md bg-gray-700 text-gray-200 focus:outline-none"
                 required
               />
               <button
                 type="submit"
-                className="px-6 py-2 bg-[#5d518b] text-white rounded-r-md hover:bg-indigo-500 focus:outline-none"
+                className="px-6 py-1 bg-[#5d518b] text-white rounded-r-md hover:bg-indigo-500 focus:outline-dotted"
                 aria-label="Sign up for our mailing list"
               >
                 Sign up

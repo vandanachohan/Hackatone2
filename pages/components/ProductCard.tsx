@@ -6,9 +6,9 @@ export default function ProductCard() {
       id: 1,
       name: "The Poplar suede sofa",
       price: "£980",
-      image: "/shofa.jpeg",
-   wight:"360",
-   height:"375"
+      image: "/Large.png",
+      wight:"360",
+      height:"375"
     },
     {
       id: 2,
