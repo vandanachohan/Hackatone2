@@ -19,7 +19,7 @@ export default function features() {
             breathe, and design. Our Chelsea boutique became the hub of Londons
             interior design community.
           </p>
-          <button className="bg-transparent border border-gray-400 text-[#1b0f41] py-3 px-6 rounded hover:bg-gray-100 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">
+          <button className="bg-transparent border border-gray-400 text-[#1b0f41] py-3 px-6 rounded hover:bg-[#1b0f41] transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">
             Get in touch
           </button>
         </div>

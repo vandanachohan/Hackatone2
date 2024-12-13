@@ -15,26 +15,26 @@ export default function About() {
         {/* Image Section */}
         <div className="md:w-1/2 text-center">
           <Image
-            src="/halfshofa.jpeg"
+            src="/Image.png"
             alt="A comfortable and stylish half sofa"
-            width={355}
-            height={400}
+            width={500}
+            height={300}
             priority
             className="object-contain"
           />
         </div>
 
-        {/* Text Section under the image */}
+         {/* Text Section under the image */}
         <div className="md:w-1/2 lg:w-1/2 text-center lg:text-left">
           <h1 className="text-4xl font-bold tracking-tight mb-6">Our Story</h1>
-          <p className="text-black text-lg mb-4">
+          <p className="text-[#1b0f41] text-lg mb-4">
             Launched in 2015, Exclusive is South Asias premier online shopping
             marketplace with an active presence in Bangladesh. Supported by a wide
             range of tailored marketing, data, and service solutions, Exclusive has
             10,500 sellers and 300 brands and serves 3 million customers across the
             region.
           </p>
-          <p className="text-black text-lg font-semibold">
+          <p className=" text-[#1b0f41] text-lg font-semibold">
             Exclusive offers more than 1 million products, growing at a very
             fast pace. We provide a diverse assortment in categories ranging
             from consumer goods to luxury items.

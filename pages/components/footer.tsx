@@ -8,7 +8,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1f173d] text-gray-200 py-12">
+    <footer className="bg-[#1b0f41] text-gray-200 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Menu Section */}
@@ -29,15 +29,31 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-semibold">Categories</h4>
             <ul className="mt-4 space-y-2">
-              {["Crockery", "Furniture", "Homeware", "Plant pots", "Chairs"].map((item) => (
-                <li key={item}>
-                  <Link href={`/categories/${item.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-indigo-600">
-                    {item}
-                    <li>
+              <li>
+                <Link href="/categories/crockery" className="hover:text-indigo-600">
+                  Crockery
+                </Link>
               </li>
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/categories/furniture" className="hover:text-indigo-600">
+                  Furniture
+                </Link>
+              </li>
+              <li>
+                <Link href="/Homeware" className="hover:text-indigo-600">
+                  Homeware
+                </Link>
+              </li>
+              <li>
+                <Link href="/categories/plant-pots" className="hover:text-indigo-600">
+                  Plant Pots
+                </Link>
+              </li>
+              <li>
+                <Link href="/categories/chairs" className="hover:text-indigo-600">
+                  Chairs
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -46,42 +62,53 @@ const Footer = () => {
             <h4 className="text-sm font-semibold">Our company</h4>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link href="/About" className="hover:text-indigo-600">About Us</Link>
+                <Link href="/About" className="hover:text-indigo-600">
+                  About Us
+                </Link>
               </li>
               <li>
-                <Link href="/vacancies" className="hover:text-indigo-600">Vacancies</Link>
+                <Link href="/vacancies" className="hover:text-indigo-600">
+                  Vacancies
+                </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-indigo-600">Contact us</Link>
+                <Link href="/contact" className="hover:text-indigo-600">
+                  Contact us
+                </Link>
               </li>
               <li>
-                <Link href="/privacy" className="hover:text-indigo-600">Privacy</Link>
+                <Link href="/privacy" className="hover:text-indigo-600">
+                  Privacy
+                </Link>
               </li>
               <li>
-                <Link href="/returns-policy" className="hover:text-indigo-600">Returns policy</Link>
+                <Link href="/returns-policy" className="hover:text-indigo-600">
+                  Returns policy
+                </Link>
               </li>
-           
             </ul>
           </div>
 
           {/* Mailing List Signup Section */}
           <div>
-            <h4 className="text-sm font-semibold">Join our mailing list</h4>
+            <h4 className="text-sm font-serif">Join our mailing list</h4>
             <form className="flex items-center mt-4">
-              <label htmlFor="email" className="sr-only">Email address</label>
+              <label htmlFor="email" className="sr-only">
+                Email address
+              </label>
               <input
                 id="email"
                 type="email"
                 placeholder="your@email.com"
-                className="px-5 py-4 w-full rounded-md bg-gray-700 text-gray-200 focus:outline-none"
+                className="px-5 py-4 w-full rounded-md bg-slate-300 text-gray-200 focus:outline-none"
                 required
               />
               <button
                 type="submit"
-                className="px-6 py-1 bg-[#5d518b] text-white rounded-r-md hover:bg-indigo-500 focus:outline-dotted"
+                className="px-7 py-1 bg-[#5d518b] text-white rounded-r-md hover:bg-indigo-500 focus:outline-dotted"
                 aria-label="Sign up for our mailing list"
               >
-                Sign up
+                Sign Up
               </button>
             </form>
           </div>

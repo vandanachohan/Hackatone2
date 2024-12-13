@@ -6,7 +6,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 
 export default function Nav() {
   return (
-    <div className="container mx-auto px-6">
+    <div className="container mx-auto px-6 mt-1 text-1xl md:text-1xl lg:text-2xl font-serif mb-6 text-base  ">
       {/* Top Header Section */}
       <div className="flex items-center justify-between py-4 border-b">
         {/* Left Section: Search Icon */}
@@ -17,7 +17,7 @@ export default function Nav() {
         </div>
 
         {/* Center Section: Brand Name */}
-        <div className="absolute left-1/2 transform -translate-x-1/2">
+        <div className="flex flex-col absolute left-1/2 transform -translate-x-1/2text-1xl md:text-1xl lg:text-2xl font-serif mb-6 text-base lg:mt-1">
           <h1 className="text-lg font-ClashDisplay ">Avion</h1>
         </div>
 
@@ -33,7 +33,7 @@ export default function Nav() {
       </div>
 
       {/* Navigation Links Section */}
-      <nav className="flex justify-center space-x-6 text-sm md:text-base py-4 bg: rgba(255, 255, 255, 1)
+      <nav className="flex justify-center relative space-x-6 text-sm md:text-base py-4 bg: rgba(255, 255, 255, 1)
 ">
         <Link className="hover:text-black" href="/plant-pots">
           Plant pots
