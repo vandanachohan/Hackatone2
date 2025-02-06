@@ -6,7 +6,6 @@ import Footer from "./components/footer";
 import HeroSection from "./components/herosection";
 import Contanier from "./components/Container";
 import Features from "./components/features";
-import Link from "next/link";
 
 
 const Home = () => {
@@ -19,22 +18,8 @@ const Home = () => {
       <ProductCard />
       <Contanier />
       <Features />
-
       <Footer />
-
-       {/* 2nd [Page] Link */}
-       <ul>
-        <li>
-          <Link
-            href="/homepage2"
-            className="bg-[#8773c9] text-white py-3 px-6 rounded-lg hover:bg-[#705bb5]">
-          
-            Go to the second homepage
-          </Link>
-        </li>
-      </ul>
     </div>
-
   );
 };
 

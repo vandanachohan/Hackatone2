@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Card from "./components/card";
 import Feature from "./components/feature";
 import Container from "./components/Container";
@@ -15,8 +16,9 @@ const HomewareSection = () => {
       <section className="relative flex flex-col lg:flex-row items-center justify-between gap-8 p-20 lg:p-44 bg-gray-50">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="/Tableset.jpeg"
+            fill
             alt="Luxury homeware background featuring a beautifully set dining table"
             className="h-[704px] w-[1440px] gap-0 object-cover"
           />
@@ -46,7 +48,7 @@ const HomewareSection = () => {
         {/* Feature Component */}
         <Feature />
         <ProductCard />
-        <Card />
+         <Card/>
       </section>
 
       <section className="p-6 lg:p-12">

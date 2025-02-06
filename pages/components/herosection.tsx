@@ -8,7 +8,7 @@ export default function Hero() {
         {/* Left Section */}
         <div className="mt-1 max-w-lg lg:p-9 px-8 py-12 md:px-20 md:py-10">
           <div className="text-1xl md:text-1xl lg:text-2xl font-serif mb-6 text-base lg:mt-1">
-            The furniture brand for the 
+            The furniture brand for the
             <h2 className="text-1xl md:text-1xl lg:text-2xl font-serif mb-6 text-base">
               future, with timeless designs
             </h2>
@@ -17,8 +17,8 @@ export default function Hero() {
             </button>
             <p className="text-sm sm:text-base md:text-lg text-gray-300">
               A new era in eco-friendly furniture with Avelon, the French luxury
-              retail brand with nice fonts, tasteful colors, and a beautiful way to
-              display things digitally using modern web technologies.
+              retail brand with nice fonts, tasteful colors, and a beautiful way
+              to display things digitally using modern web technologies.
             </p>
           </div>
         </div>
@@ -29,9 +29,9 @@ export default function Hero() {
             src="/cheyer.jpeg"
             alt="Modern chair"
             className="object-contain"
-            width={500}
-            height={300} // Adjust based on your image's aspect ratio
-            layout="responsive"
+            width={400} // Reduce width
+            height={350} // Adjust height proportionally
+            style={{ maxWidth: "100%", height: "auto" }} // Ensure responsiveness
           />
         </div>
       </div>

@@ -29,6 +29,9 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-semibold">Categories</h4>
             <ul className="mt-4 space-y-2">
+            <Link href="/product-list" className="hover:text-indigo-600">
+                  Product-List
+                </Link>
               <li>
                 <Link href="/categories/crockery" className="hover:text-indigo-600">
                   Crockery
@@ -100,7 +103,7 @@ const Footer = () => {
                 id="email"
                 type="email"
                 placeholder="your@email.com"
-                className="px-5 py-4 w-full rounded-md bg-slate-300 text-gray-200 focus:outline-none"
+                className="px-5 py-4 w-full rounded-md bg-slate-300 text-black focus:outline-none"
                 required
               />
               <button
