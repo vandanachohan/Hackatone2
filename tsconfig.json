@@ -43,7 +43,7 @@
     "**/*.jsx",
     ".next/types/**/*.ts",
     "pages/utils/product.js",
-    "pages/product/[slug].tsx",
+    "pages/product/[...slug].tsx",
     "sanity-migration/importData.cjs",
     "tailwind.config.ts",
     "src/**/*"

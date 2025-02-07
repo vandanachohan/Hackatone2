@@ -1,4 +1,5 @@
 export interface Product {
+  asset: any;
   name: string;
   id: string | null | undefined; // Clarified as string or null/undefined
   _id: string; // Unique identifier for the product

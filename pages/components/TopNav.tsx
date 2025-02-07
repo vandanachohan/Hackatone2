@@ -10,9 +10,10 @@ const Nav = (): React.JSX.Element => {
   const router = useRouter();
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [suggestions, setSuggestions] = useState<
-    { name: string; route: string }[]
-  >([]);
+  const [suggestions, setSuggestions] = useState<{
+    name: string;
+    route: string;
+  }[]>([]);
 
   // Example product list with routes
   const products = [
@@ -93,7 +94,7 @@ const Nav = (): React.JSX.Element => {
 
         {/* Right Section: Cart, Profile, and Language */}
         <div className="flex items-center space-x-4">
-          <Link href="/cart" aria-label="Cart">
+          <Link href="/wishlist" aria-label="Cart">
             <AiOutlineShoppingCart
               size={24}
               className="text-gray-600 hover:text-black"
@@ -105,7 +106,6 @@ const Nav = (): React.JSX.Element => {
               className="text-gray-600 hover:text-black"
             />
           </Link>
-
           {/* Language Dropdown */}
           <div className="relative">
             <span

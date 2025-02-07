@@ -1,4 +1,3 @@
-// pages/category/[category].tsx
 import { GetServerSideProps } from 'next';
 import Image from 'next/image';
 
@@ -15,49 +14,33 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const { category } = context.query;
   const categoryString = Array.isArray(category) ? category[0] : category;
 
-  // Fallback for missing environment variable
-  const apiUrl = process.env.API_URL || 'https://hackathon-apis.vercel.app/api/products';
-
   try {
-    console.log("Fetching products from:", `${apiUrl}/products`);
-    const res = await fetch(`${apiUrl}/products`);
+    console.log("Fetching products...");
+    const res = await fetch(`http://localhost:3000/api/products`);
 
-    // Handle 404 errors
-    if (res.status === 404) {
-      throw new Error("Products not found (404)");
-    }
-
-    // Handle other errors
     if (!res.ok) {
       throw new Error(`API returned ${res.status}`);
     }
 
     const products: Product[] = await res.json();
 
-    if (!Array.isArray(products)) {
-      throw new Error("API response is not an array");
-    }
-
-    const filteredProducts = products.filter(product =>
-      typeof product.category === "string" &&
-      product.category.toLowerCase() === categoryString?.toLowerCase()
+    const filteredProducts = products.filter(
+      (product) =>
+        product.category.toLowerCase() === categoryString?.toLowerCase()
     );
 
     return {
       props: {
         products: filteredProducts,
-        category: categoryString || 'Unknown',
+        category: categoryString || "Unknown",
       },
     };
-  } catch (error: unknown) {
-    const errorMessage = error instanceof Error ? error.message : "Unknown error occurred";
-    console.error("Error fetching data:", errorMessage);
-
+  } catch (error) {
     return {
       props: {
         products: [],
-        category: categoryString || 'Unknown',
-        error: errorMessage,
+        category: categoryString || "Unknown",
+        error: "Failed to fetch products.",
       },
     };
   }

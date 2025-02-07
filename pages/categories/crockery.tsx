@@ -1,7 +1,25 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-export default function Chairs() {
+// Define the type for a product
+interface Product {
+  name: string;
+  description: string;
+  price: number;
+  imageUrl: string;
+  dimensions: { height: string; width: string; depth: string };
+}
+
+const product: Product = {
+  name: "Elegant Crockery Set",
+  description:
+    "A premium set of crockery perfect for dining and special occasions. Made from fine porcelain, this set is both durable and elegant.",
+  price: 150,
+  imageUrl: "/crockery.jpg",
+  dimensions: { height: "30cm", width: "50cm", depth: "50cm" },
+};
+
+export default function CrockeryDetail() {
   const [quantity, setQuantity] = useState(1);
 
   const increaseQuantity = () => setQuantity((prev) => prev + 1);
@@ -12,39 +30,41 @@ export default function Chairs() {
       <div className="grid md:grid-cols-2 bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
         {/* Left Side - Product Image */}
         <div className="relative h-80 md:h-auto">
-          <Image src="/chear2.jpeg" alt="The Dandy Chair" layout="fill" objectFit="cover" />
+          <Image
+            src={product.imageUrl}
+            alt={product.name}
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
 
         {/* Right Side - Product Details */}
         <div className="p-6 md:p-10">
-          <h1 className="text-3xl font-semibold text-gray-900">The Dandy Chair</h1>
-          <p className="text-xl text-gray-700 mt-2">£250</p>
+          <h1 className="text-3xl font-semibold text-gray-900">{product.name}</h1>
+          <p className="text-xl text-gray-700 mt-2">£{product.price}</p>
 
           <h2 className="text-lg font-medium text-gray-800 mt-6">Description</h2>
-          <p className="text-gray-600 mt-2">
-            A timeless design, with premium materials, featuring as one of our most popular and iconic pieces.
-            The Dandy Chair is perfect for any stylish living space with beech legs and lambskin leather upholstery.
-          </p>
+          <p className="text-gray-600 mt-2">{product.description}</p>
 
           <ul className="list-disc pl-5 mt-4 text-gray-600 space-y-1">
-            <li>Premium material</li>
-            <li>Handmade upholstery</li>
-            <li>Quality timeless classic</li>
+            <li>Premium porcelain material</li>
+            <li>Elegant design for special occasions</li>
+            <li>Dishwasher safe</li>
           </ul>
 
           <h2 className="text-lg font-medium text-gray-800 mt-6">Dimensions</h2>
           <div className="grid grid-cols-3 gap-4 text-gray-700 mt-2">
             <div>
               <p className="font-medium">Height</p>
-              <p>110cm</p>
+              <p>{product.dimensions.height}</p>
             </div>
             <div>
               <p className="font-medium">Width</p>
-              <p>75cm</p>
+              <p>{product.dimensions.width}</p>
             </div>
             <div>
               <p className="font-medium">Depth</p>
-              <p>50cm</p>
+              <p>{product.dimensions.depth}</p>
             </div>
           </div>
 
