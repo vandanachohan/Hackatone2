@@ -9,10 +9,9 @@ import Nav from "./components/TopNav";
 
 const HomewareSection = () => {
   return (
-       
     <div className="">
       <Nav />
-   
+
       <section className="relative flex flex-col lg:flex-row items-center justify-between gap-8 p-20 lg:p-44 bg-gray-50">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
@@ -38,35 +37,27 @@ const HomewareSection = () => {
         </div>
       </section>
 
-    
+      <div>
+        {/* Other Components */}
+        <section className="p-6 lg:p-12 ">
+          {/* Feature Component */}
+          <Feature />
+          <ProductCard />
+          <Card />
+        </section>
 
- 
+        <section className="p-6 lg:p-12">
+          {/* Container Component */}
+          <Container />
+        </section>
 
-  <div>
-      {/* Other Components */}
-      <section className="p-6 lg:p-12 ">
-        {/* Feature Component */}
-        <Feature />
-        <ProductCard />
-         <Card/>
-      </section>
-
-      <section className="p-6 lg:p-12">
-        {/* Container Component */}
-        <Container />
-      </section>
-
-      <footer className="p-6 lg:p-12  text-white">
-        {/* Footer Component */}
-        <Footer />
-      </footer>
+        <footer className="p-6 lg:p-12  text-white">
+          {/* Footer Component */}
+          <Footer />
+        </footer>
       </div>
-
-
-      </div>
+    </div>
   );
 };
-
-
 
 export default HomewareSection;
